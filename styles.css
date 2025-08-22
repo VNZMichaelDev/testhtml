@@ -1587,6 +1587,61 @@ body {
   color: #6E7B8F;
 }
 
+/* Calculadora: Radios de período mejorados */
+.calc-radio-group {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.calc-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.25em 1em 0.25em 0.5em;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+  border: 2px solid transparent;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.calc-radio-group input[type="radio"] {
+  accent-color: #a855f7;
+  margin-right: 0.3em;
+  width: 1.1em;
+  height: 1.1em;
+  position: relative;
+  top: 0;
+}
+
+.calc-radio-group input[type="radio"]:checked + span,
+.calc-radio-group label.selected {
+  background: linear-gradient(90deg,#a855f7 60%,#f472b6 100%);
+  color: #fff;
+  border: 2px solid #a855f7;
+}
+
+.calc-radio-group label span {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .calc-radio-group {
+    gap: 0.5rem;
+  }
+  .calc-radio-group label {
+    font-size: 0.97rem;
+    padding: 0.18em 0.7em 0.18em 0.4em;
+  }
+}
+
 /* Responsive Design */
 @media (min-width: 640px) {
   .container {
@@ -1897,32 +1952,13 @@ body {
     grid-template-columns: 1fr !important;
     gap: 1.2rem;
   }
-  .c-card {
-    padding: 1.1rem 0.7rem;
-    font-size: 0.98rem;
-    min-width: 0;
-    max-width: 100%;
-  }
-  .c-plan,
-  .c-price {
-    font-size: 1.1rem;
-  }
-  .c-desc {
-    font-size: 0.98rem;
-  }
-  .course-image {
-    height: 90px !important;
-    min-height: 70px !important;
-    max-height: 100px !important;
-  }
-  .course-image img {
-    max-height: 100px !important;
-  }
   .c-card,
   .c-inner {
-    min-height: 460px !important;
+    min-height: 520px !important; /* Ajusta según tu contenido */
     height: auto !important;
-    padding: 0.7rem 0.3rem !important;
+    padding: 0 !important;
+    border-radius: 18px !important;
+    background: #23243a;
   }
   .c-face,
   .c-front,
@@ -1930,20 +1966,46 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    min-height: 460px;
-    padding-bottom: 1.5rem;
+    min-height: 520px !important;
+    padding: 0 0 1.5rem 0 !important;
     box-sizing: border-box;
-    overflow-y: visible !important; /* Quita el scroll en todas las caras */
+    overflow-y: visible !important; /* Quita scroll interno */
+    border-radius: 18px !important;
+    background: transparent !important;
+  }
+  .course-image {
+    width: 100% !important;
+    height: 140px !important;
+    min-height: 140px !important;
+    max-height: 160px !important;
+    margin: 0 !important;
+    border-radius: 18px 18px 0 0 !important;
+    overflow: hidden;
+    background: #18192a;
+  }
+  .course-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 18px 18px 0 0 !important;
+    display: block;
+  }
+  .c-plan,
+  .c-price,
+  .c-desc {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .c-actions {
-    margin-top: 0.5rem;
-    gap: 0.5rem;
+    margin-top: 1rem;
+    gap: 0.7rem;
     flex-direction: column;
     align-items: stretch;
+    padding: 0 1rem;
   }
   .c-actions .btn {
-    min-height: 40px;
-    font-size: 0.95rem;
+    min-height: 44px;
+    font-size: 1rem;
     padding: 0.7em 0.5em;
     width: 100%;
   }
@@ -1996,22 +2058,25 @@ body {
 }
 .calc-radio-group {
   display: flex;
-  gap: 1.1rem;
-  margin-top: 0.2rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 .calc-radio-group label {
-  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1rem;
   color: #fff;
   font-weight: 500;
   cursor: pointer;
   border-radius: 999px;
-  padding: 0.2em 0.7em 0.2em 0.3em;
+  padding: 0.25em 1em 0.25em 0.5em;
   background: transparent;
   transition: background 0.2s, color 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
+  border: 2px solid transparent;
+  margin-bottom: 0;
+  position: relative;
 }
 
 .calc-radio-group input[type="radio"] {
@@ -2019,100 +2084,27 @@ body {
   margin-right: 0.3em;
   width: 1.1em;
   height: 1.1em;
+  position: relative;
+  top: 0;
 }
 
 .calc-radio-group input[type="radio"]:checked + span,
 .calc-radio-group label.selected {
   background: linear-gradient(90deg,#a855f7 60%,#f472b6 100%);
   color: #fff;
-}
-.calc-field input[type="number"] {
-  background: #23243a;
   border: 2px solid #a855f7;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 0.7em 0.8em;
-  outline: none;
-  transition: border 0.2s;
-  box-shadow: 0 2px 8px rgba(168,85,247,0.07);
-  appearance: textfield;
 }
-.calc-field input[type="number"]:focus {
-  border-color: #f472b6;
-  background: #23243a;
+
+.calc-radio-group label span {
+  display: inline;
 }
-.calc-field input[type="number"]::-webkit-inner-spin-button,
-.calc-field input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.calc-summary {
-  margin-top: 2rem;
-  display: grid;
-  gap: 0.7rem;
-}
-.calc-kpi {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #23243a;
-  border-radius: 8px;
-  padding: 0.7em 1em;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  border: 1.5px solid #a855f7;
-  box-shadow: 0 2px 8px rgba(168,85,247,0.07);
-  transition: background 0.2s, border 0.2s;
-}
-.calc-kpi b {
-  font-size: 1.08em;
-  color: #f472b6;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-}
-.calc-muted {
-  color: #bdbde6;
-  font-size: 0.92rem;
-  margin-top: 0.5em;
-  display: block;
-  text-align: right;
-}
+
 @media (max-width: 600px) {
-  .calc-section {
-    margin: 1.5rem 0 1rem 0;
-  }
-  .calc-box {
-    padding: 1rem 0.2rem;
-    border-radius: 12px;
-  }
-  .calc-grid {
-    grid-template-columns: 1fr;
-    gap: 0.8rem;
-  }
-  .calc-field input[type="number"] {
-    font-size: 1rem;
-    padding: 0.6em 0.7em;
-  }
-  .calc-label {
-    font-size: 0.98rem;
-  }
-  .calc-summary {
-    margin-top: 1.2rem;
+  .calc-radio-group {
     gap: 0.5rem;
   }
-  .calc-kpi {
-    font-size: 0.98rem;
-    padding: 0.6em 0.7em;
-    border-radius: 7px;
-  }
-  .calc-kpi b {
-    font-size: 1em;
-  }
-  .calc-muted {
-    font-size: 0.85rem;
-    text-align: left;
+  .calc-radio-group label {
+    font-size: 0.97rem;
+    padding: 0.18em 0.7em 0.18em 0.4em;
   }
 }
