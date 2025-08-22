@@ -199,6 +199,49 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
+
+  // Calculadora MEGAPRO
+  const priceStd = 149, commStd = 0.90;   // 90%
+  const pricePrem = 450, commPrem = 0.80; // 80%
+  const qStd = document.getElementById('qStd');
+  const qPrem = document.getElementById('qPrem');
+  const kStd = document.getElementById('kStd');
+  const kPrem = document.getElementById('kPrem');
+  const kTotal = document.getElementById('kTotal');
+  const kMonthly = document.getElementById('kMonthly');
+  const periodRadios = Array.from(document.querySelectorAll('input[name="period"]'));
+  const fmt = new Intl.NumberFormat('en-US', {style:'currency', currency:'USD', maximumFractionDigits:2});
+
+  function calc(){
+    const nStd = Math.max(0, parseInt(qStd.value || '0', 10));
+    const nPrem = Math.max(0, parseInt(qPrem.value || '0', 10));
+    const incomeStd = nStd * priceStd * commStd;
+    const incomePrem = nPrem * pricePrem * commPrem;
+    const period = periodRadios.find(r=>r.checked)?.value || 'week';
+    const total = incomeStd + incomePrem;
+    const monthly = period === 'week' ? total * 4 : total; // proyección a mes si se elige semana
+
+    kStd.textContent = fmt.format(incomeStd);
+    kPrem.textContent = fmt.format(incomePrem);
+    kTotal.textContent = fmt.format(total);
+    kMonthly.textContent = fmt.format(monthly);
+  }
+  [qStd,qPrem].forEach(inp=>{
+    inp.addEventListener('input', calc);
+    inp.addEventListener('blur', ()=>{ if(inp.value===''||isNaN(inp.value)) {inp.value='0'; calc();} });
+  });
+  periodRadios.forEach(r=>r.addEventListener('change', calc));
+  calc();
+
+  // Calculadora radio buttons
+  document.querySelectorAll('.calc-radio-group input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      document.querySelectorAll('.calc-radio-group label').forEach(l => l.classList.remove('selected'));
+      this.parentElement.classList.add('selected');
+    });
+    // Inicializa el seleccionado al cargar
+    if(radio.checked) radio.parentElement.classList.add('selected');
+  });
 })
 
 // Prevent zoom on double tap (iOS Safari)

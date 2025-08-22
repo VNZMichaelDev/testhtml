@@ -446,6 +446,51 @@
         </div>
     </section>
 
+<!-- Calculadora de ganancias MEGAPRO -->
+<section id="calculadora" class="calc-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="gradient-text"> Calculadora de ganancias</span>
+      </h2>
+      <p class="section-description">
+        Estima tus ingresos como afiliado MEGA PRO según tus ventas.
+      </p>
+    </div>
+    <div class="calc-box">
+      <form id="af-calc-form" autocomplete="off">
+        <div class="calc-grid">
+          <div class="calc-field">
+            <label class="calc-label" for="qStd">Ventas Estándar</label>
+            <input id="qStd" type="number" min="0" step="1" inputmode="numeric" value="0" aria-describedby="qStdHelp">
+            <span id="qStdHelp" class="calc-help">Cursos Estándar vendidos en el período.</span>
+          </div>
+          <div class="calc-field">
+            <label class="calc-label" for="qPrem">Ventas Exclusivas</label>
+            <input id="qPrem" type="number" min="0" step="1" inputmode="numeric" value="0" aria-describedby="qPremHelp">
+            <span id="qPremHelp" class="calc-help">Cursos Exclusivos vendidos en el período.</span>
+          </div>
+          <div class="calc-field">
+            <span class="calc-label">Período</span>
+            <div class="calc-radio-group" role="radiogroup" aria-label="Elegir período">
+              <label><input type="radio" name="period" value="week" checked> Por semana</label>
+              <label><input type="radio" name="period" value="month"> Por mes</label>
+            </div>
+            <span class="calc-help">Semana se proyecta a mes multiplicando ×4 (aprox.).</span>
+          </div>
+        </div>
+        <div class="calc-summary">
+          <div class="calc-kpi"><span>Ingreso Estándar</span> <b id="kStd">$0</b></div>
+          <div class="calc-kpi"><span>Ingreso Exclusivo</span> <b id="kPrem">$0</b></div>
+          <div class="calc-kpi"><span>Total período</span> <b id="kTotal">$0</b></div>
+          <div class="calc-kpi"><span>Proyección mensual</span> <b id="kMonthly">$0</b></div>
+          <span class="calc-muted calc-help">* Montos estimados en USD según comisiones vigentes.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
