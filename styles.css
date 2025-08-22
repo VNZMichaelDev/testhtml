@@ -1755,62 +1755,128 @@ body {
   }
 }
 
-/* Utility Classes */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Focus styles for accessibility */
-button:focus,
-a:focus {
-  outline: 2px solid #f472b6;
-  outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .gradient-text {
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+/* --- Responsive Mejorado para Móvil --- */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  .hero-blob-1,
-  .hero-blob-2 {
-    animation: none;
+  .hero-title {
+    font-size: 2.1rem;
+    line-height: 1.1;
+  }
+  .hero-title-main,
+  .hero-title-sub {
+    font-size: 2.2rem;
+  }
+  .hero-description {
+    font-size: 1.05rem;
+  }
+  .hero-video .video-container {
+    height: 180px;
+    min-height: 0;
+  }
+  .video-container iframe {
+    height: 180px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+  .c-card {
+    padding: 1.1rem 0.7rem;
+    font-size: 0.98rem;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .c-plan,
+  .c-price {
+    font-size: 1.1rem;
+  }
+  .c-desc {
+    font-size: 0.98rem;
+  }
+  .course-image img {
+    max-height: 120px;
+    object-fit: cover;
+  }
+  .c-actions {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .c-actions .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7em 0;
+  }
+  .c-face.c-back ul,
+  .c-face.c-back p {
+    font-size: 0.97rem;
+  }
+  .c-face.c-back h4,
+  .c-face.c-back h5 {
+    font-size: 1.08rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .about-grid,
+  .affiliate-grid,
+  .results-kit-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+  .about-card,
+  .affiliate-card,
+  .results-card,
+  .kit-card {
+    padding: 1.1rem 0.7rem;
+  }
+
+  .footer-content {
+    padding: 1.2rem 0.5rem;
+    text-align: center;
+  }
+  .footer-logo-img {
+    width: 38px;
+    height: 38px;
+  }
+  .footer-logo-text {
+    font-size: 1.1rem;
+  }
+  .footer-description {
+    font-size: 0.98rem;
+  }
+  .footer-actions .btn-primary,
+  .footer-actions .btn-outline {
+    width: 100%;
+    margin-bottom: 0.7rem;
+  }
+
+  .btn-primary,
+  .btn-outline,
+  .btn-final,
+  .btn-affiliate {
+    font-size: 1rem;
+    padding: 0.7em 0;
+    width: 100%;
+  }
+
+  .guarantee-title {
+    font-size: 1.1rem;
+  }
+  .guarantee-text {
+    font-size: 0.98rem;
   }
 
   .scroll-indicator {
-    animation: none;
+    margin-top: 1.2rem;
   }
-
-  .whatsapp-pulse,
-  .whatsapp-pulse-2 {
-    animation: none;
-  }
-}
-
-.c-back h5 {
-  font-size: 1.05em;
-  font-weight: 700;
-  margin-top: 1em;
-  margin-bottom: 0.5em;
-  letter-spacing: 0.01em;
 }
