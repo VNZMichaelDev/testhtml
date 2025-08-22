@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA PRO ACADEMY - Formación Profesional en Negocios Digitales</title>
+    <meta name="description" content="Aprende a crear y escalar tu negocio digital con nuestra formación profesional. Dos niveles disponibles con bonos exclusivos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-main">MEGAPRO</span>
+                    <span class="logo-sub">ACADEMY</span>
+                </div>
+
+                <nav class="nav-desktop">
+                    <a href="#cursos" class="nav-link">Cursos</a>
+                    <a href="#quienes-somos" class="nav-link">Quiénes Somos</a>
+                    <a href="#afiliados" class="nav-link">Afiliados</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="btn-primary btn-desktop" onclick="scrollToSection('cursos')">
+                        <span class="btn-text-full">Comenzar Ahora</span>
+                        <span class="btn-text-short">Comenzar</span>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <nav class="mobile-nav">
+                    <a href="#cursos" class="mobile-nav-link">Cursos</a>
+                    <a href="#quienes-somos" class="mobile-nav-link">Quiénes Somos</a>
+                    <a href="#afiliados" class="mobile-nav-link">Afiliados</a>
+                    <button class="btn-primary btn-mobile" onclick="scrollToSection('cursos')">
+                        Comenzar Ahora
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-title-main">MEGA PRO</span>
+                    <br>
+                    <span class="hero-title-sub">ACADEMY</span>
+                </h1>
+
+                <p class="hero-description">
+                    La formación más completa en 
+                    <span class="gradient-text">negocios digitales</span> 
+                    que transformará tu vida financiera
+                </p>
+
+                <div class="hero-video">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/0gS_p625rKE" 
+                            title="MEGA PRO ACADEMY Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <button class="btn-primary btn-hero" onclick="scrollToSection('cursos')">
+                        <span class="btn-text-full">Comenzar Mi Transformación</span>
+                        <span class="btn-text-short">Comenzar Transformación</span>
+                    </button>
+                </div>
+
+                <div class="scroll-indicator">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="cursos" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="gradient-text">Elige Tu Nivel</span>
+                </h2>
+                <p class="section-description">
+                    Dos opciones diseñadas para diferentes etapas de tu journey empresarial. Toca "Saber más" para ver todo lo que incluye.
+                </p>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Standard Course -->
+                <article class="c-card" data-card="estandar">
+                    <div class="c-inner" tabindex="0" aria-live="polite">
+                        <!-- Frente -->
+                        <div class="c-face c-front" role="group" aria-label="Formación Estándar">
+                            <div class="course-image">
+                                <img src="https://i.postimg.cc/3Rq3G0F2/12.jpg" alt="Formación Estándar">
+                            </div>
+                            <div class="c-plan">Formación Estándar</div>
+                            <div class="c-price">USD 149 <span style="font-size:0.9em;">/ pago único</span></div>
+                            <div class="c-desc">
+                                <strong>Acceso de por vida + actualizaciones</strong><br>
+                                Tu primer negocio digital paso a paso: fundamentos, servicios listos y ventas por WhatsApp “desde el celu”.
+                            </div>
+                            <div class="c-actions">
+                                <button class="btn btn-primary" onclick="openWhatsApp('standard')">Comprar Estándar</button>
+                                <button class="btn ghost js-more" data-target="estandar" aria-expanded="false">Saber más</button>
+                            </div>
+                        </div>
+                        <!-- Dorso -->
+                        <div class="c-face c-back" role="group" aria-label="Detalles Formación Estándar">
+                            <hr style="margin:1.2em 0;border:0;border-top:1.5px solid #a855f7;">
+                            <h5 style="color:#4ade80;margin-bottom:0.5em;">✅ ¿Qué recibís con tu compra?</h5>
+                            <ul style="margin-bottom:1.2em;">
+                                <li>Acceso completo al curso elegido (Estándar).</li>
+                                <li>Todos los BONOS incluidos.</li>
+                                <li>Clases grabadas, claras y aplicables.</li>
+                                <li>Recursos descargables: ejercicios, plantillas y guías.</li>
+                                <li>Acceso desde cualquier dispositivo.</li>
+                                <li>Posibilidad de vender como afiliado/a.</li>
+                                <li>Actualizaciones gratuitas de por vida.</li>
+                                <li>Soporte personalizado.</li>
+                            </ul>
+                            <div class="c-actions">
+                                <button class="btn ghost js-back" data-target="estandar">Volver</button>
+                                <button class="btn btn-primary" onclick="openWhatsApp('standard')">Inscribirme</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Exclusive Course -->
+                <article class="c-card c-card-popular" data-card="premium">
+                   
+                    <div class="c-inner" tabindex="0" aria-live="polite">
+                        <!-- Frente -->
+                        <div class="c-face c-front" role="group" aria-label="Formación Exclusiva">
+                            <div class="course-image">
+                                <img src="https://i.postimg.cc/qRqkgxyk/13.jpg" alt="Formación Exclusiva">
+                            </div>
+                            <div class="c-plan">Formación Exclusiva</div>
+                            <div class="c-price">USD 450 <span style="font-size:0.9em;">/ pago único</span></div>
+                            <div class="c-desc">
+                                <strong>Acceso de por vida + actualizaciones</strong><br>
+                                Escalá profesionalmente: marca personal, infoproductos, automatizaciones y lanzamientos con picos de ventas.
+                            </div>
+                            <div class="c-actions">
+                                <button class="btn btn-primary" onclick="openWhatsApp('exclusive')">Comprar Exclusivo</button>
+                                <button class="btn ghost js-more" data-target="premium" aria-expanded="false">Saber más</button>
+                            </div>
+                        </div>
+                        <!-- Dorso -->
+                        <div class="c-face c-back" role="group" aria-label="Detalles Formación Exclusiva">
+                    
+                            </ul>
+                            <hr style="margin:1.2em 0;border:0;border-top:1.5px solid #a855f7;">
+                            <h5 style="color:#4ade80;margin-bottom:0.5em;">✅ ¿Qué recibís con tu compra?</h5>
+                            <ul style="margin-bottom:1.2em;">
+                                <li>Acceso completo al curso elegido (Exclusivo).</li>
+                                <li>Todos los BONOS incluidos.</li>
+                                <li>Clases grabadas, claras y aplicables.</li>
+                                <li>Recursos descargables: ejercicios, plantillas y guías.</li>
+                                <li>Acceso desde cualquier dispositivo.</li>
+                                <li>Posibilidad de vender como afiliado/a.</li>
+                                <li>Actualizaciones gratuitas de por vida.</li>
+                                <li>Soporte personalizado.</li>
+                            </ul>
+                            <div class="c-actions">
+                                <button class="btn ghost js-back" data-target="premium">Volver</button>
+                                <button class="btn btn-primary" onclick="openWhatsApp('exclusive')">Inscribirme</button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="guarantee">
+                <div class="guarantee-content">
+                    <h3 class="guarantee-title">🛡️ Garantía de 30 Días</h3>
+                    <p class="guarantee-text">Si no estás 100% satisfecho, te devolvemos tu dinero sin preguntas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="quienes-somos" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    🚀 ¿Qué es <span class="gradient-text">MEGA PRO ACADEMY</span>?
+                </h2>
+                <p class="section-description">
+                    MEGA PRO ACADEMY es una formación premium diseñada para emprendedores decididos a construir un negocio digital rentable y profesional. No es un curso más: es una hoja de ruta completa para crear tu marca, desarrollar productos, automatizar ventas y posicionarte como referente.
+                </p>
+                <p class="section-subdescription">
+                    Está pensada para quienes entienden que todo negocio serio requiere inversión, compromiso y acción real.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">🎯 ¿Para quién es?</h3>
+                    <div class="about-card-content">
+                        <p>✅ Personas decididas a emprender en digital, aunque estén comenzando</p>
+                        <p>✅ Emprendedores que quieren escalar y dejar de improvisar</p>
+                        <p>✅ Quienes buscan un sistema de ingresos real, profesional y automatizado</p>
+                        <p>✅ Quienes desean generar ingresos también como afiliados</p>
+                        <p class="about-warning">❌ No es para curiosos ni para quienes buscan resultados sin esfuerzo</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="about-card-title">📚 ¿Qué vas a lograr?</h3>
+                    <div class="about-card-content">
+                        <p>🚀 Crear tu propio negocio digital desde cero</p>
+                        <p>🎯 Elegir el modelo de negocio que mejor se adapte a vos</p>
+                        <p>💬 Aprender estrategias reales de ventas con WhatsApp y redes</p>
+                        <p>🏆 Posicionarte como una marca profesional</p>
+                        <p>⚡ Automatizar procesos y escalar tu negocio</p>
+                        <p>💰 Ganar dinero vendiendo MEGA PRO ACADEMY como afiliado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Words -->
+            <div class="final-words">
+                <div class="final-words-content">
+                    <h3>🎤 Palabras finales</h3>
+                    <div class="final-words-text">
+                        <p>Emprender no es magia. Es decisión, formación y acción.</p>
+                        <p>En MEGA PRO ACADEMY te damos las herramientas, pero el compromiso es tuyo.</p>
+                        <p class="highlight">Si querés construir un negocio digital real, este es tu momento.</p>
+                    </div>
+                </div>
+                <button class="btn-primary btn-final" onclick="openWhatsAppGeneral()">
+                    Comenzar mi transformación digital 🚀
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliate Section -->
+    <section id="afiliados" class="affiliate">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Marketing de Afiliados <span class="gradient-text">MEGA PRO</span> — Tu ingreso extra (o principal)
+                </h2>
+                <p class="section-description">
+                    En MEGA PRO ACADEMY no solo aprendés a crear tu propio negocio digital, también podés ganar dinero vendiendo esta misma formación como afiliado/a.
+                </p>
+                <p class="section-subdescription">
+                    Con nuestro Kit de Afiliado tenés mensajes, guiones y estrategias listas para usar, para que empieces a vender desde el primer día.
+                </p>
+            </div>
+
+            <div class="affiliate-grid">
+                <div class="affiliate-card">
+                    <div class="affiliate-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="affiliate-card-title">💰 Comisiones claras</h3>
+                    <div class="commission-boxes">
+                        <div class="commission-box">
+                            <p class="commission-course">Curso Estándar (USD 149)</p>
+                            <p class="commission-amount">90% = USD 134,10 por venta</p>
+                        </div>
+                        <div class="commission-box commission-box-exclusive">
+                            <p class="commission-course">Curso Exclusivo (USD 450)</p>
+                            <p class="commission-amount">80% = USD 360,00 por venta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="affiliate-card">
+                    <div class="affiliate-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="affiliate-card-title">📊 Proyección de ganancias</h3>
+                    <p class="projection-subtitle">Ejemplo real (solo con MEGA PRO):</p>
+                    <div class="projection-list">
+                        <div class="projection-item">
+                            <span class="projection-desc">2 ventas Estándar/semana → 8/mes</span>
+                            <span class="projection-amount">USD 1.072,80</span>
+                        </div>
+                        <div class="projection-item">
+                            <span class="projection-desc">2 ventas Exclusivas/semana → 8/mes</span>
+                            <span class="projection-amount">USD 2.880,00</span>
+                        </div>
+                        <div class="projection-item projection-item-highlight">
+                            <span class="projection-desc">Combinando ambas (4+4)</span>
+                            <span class="projection-amount">USD 2.512,80/mes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategies -->
+            <div class="strategies">
+                <div class="strategies-header">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                    <h3>📌 Claves para vender rápido</h3>
+                </div>
+                <div class="strategies-grid">
+                    <div class="strategy-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <div>
+                            <h4>Estrategia de WhatsApp Business</h4>
+                            <p>(te la enseñamos paso a paso)</p>
+                        </div>
+                    </div>
+                    <div class="strategy-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                        <div>
+                            <h4>Redes Sociales con embudo simple</h4>
+                            <p>reel + link directo</p>
+                        </div>
+                    </div>
+                    <div class="strategy-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                        <div>
+                            <h4>Historias con llamada a la acción</h4>
+                            <p>usando los guiones del kit</p>
+                        </div>
+                    </div>
+                    <div class="strategy-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M14 9h1.5a2.5 2.5 0 0 1 0 5H14"></path>
+                            <path d="M6 9v6a6 6 0 0 0 12 0V9"></path>
+                        </svg>
+                        <div>
+                            <h4>Ofertas y urgencia</h4>
+                            <p>cupos limitados, bonus y fecha de cierre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results and Kit -->
+            <div class="results-kit-grid">
+                <div class="results-card">
+                    <div class="results-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>🚀 Resultado esperado</h3>
+                    <div class="results-list">
+                        <p>✅ Cubrir tu inversión con tu primera o segunda venta</p>
+                        <p>✅ Generar un flujo constante de ingresos aplicando el sistema</p>
+                        <p>✅ Replicar la metodología con otros productos y nichos</p>
+                        <p class="results-highlight">En pocas semanas podés lograrlo todo!</p>
+                    </div>
+                </div>
+
+                <div class="kit-card">
+                    <div class="kit-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                            <path d="M14 9h1.5a2.5 2.5 0 0 1 0 5H14"></path>
+                            <path d="M6 9v6a6 6 0 0 0 12 0V9"></path>
+                        </svg>
+                    </div>
+                    <h3>🎁 Kit de Afiliado MEGA PRO</h3>
+                    <div class="kit-list">
+                        <p>📱 Mensajes para WhatsApp y redes</p>
+                        <p>🎯 Estrategias probadas de conversión</p>
+                        <p>📞 Guiones para llamadas y cierre de ventas</p>
+                        <p>📸 Estados e historias listos para publicar</p>
+                        <p class="kit-highlight">Incluido en tu compra!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Affiliate CTA -->
+            <div class="affiliate-cta">
+                <div class="affiliate-cta-content">
+                    <h3>🛒 Quiero ser afiliado/a de MEGA PRO</h3>
+                    <p>Únete a nuestro programa de afiliados y comienza a generar ingresos desde el primer día con nuestro kit completo de herramientas y estrategias.</p>
+                    <button class="btn-primary btn-affiliate" onclick="openWhatsAppAffiliate()">
+                        Registrarme Como Afiliado 🚀
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://i.postimg.cc/5067knZQ/logo.jpg" alt="MEGA PRO" class="footer-logo-img">
+                    <span class="footer-logo-text">MEGA PRO ACADEMY</span>
+                </div>
+                <p class="footer-description">
+                    La academia líder en formación de negocios digitales. Transformamos emprendedores en empresarios exitosos con estrategias probadas y mentores expertos.
+                </p>
+                <div class="footer-actions">
+                    <button class="btn-primary" onclick="scrollToSection('cursos')">
+                        Comenzar Ahora
+                    </button>
+                    <button class="btn-outline" onclick="openWhatsAppGeneral()">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-button" onclick="openWhatsAppGeneral()">
+        <div class="whatsapp-pulse"></div>
+        <div class="whatsapp-pulse-2"></div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+        <div class="whatsapp-tooltip">¡Chatea con nosotros!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
